@@ -1,14 +1,5 @@
-/***************************************
-* Lab0 *
-* Author: Last name, first name *
-* EECS/Prism username: Your eecs login username *
-* Yorku Student #: Your student number *
-* Email: Your email address *
-****************************************/
-
 #include <stdio.h>
 
-// function prototypes
 float sum (float i, float j);
 void greet(int i);
 
@@ -18,7 +9,11 @@ int main()
    greet(a);
    int b = 1015 - 3;
    greet(b);
-   float x =2.2, y=3.3;
+
+   float x,y;
+   printf("Enter two float numbers separated by ##:");
+   scanf("%f##%f", &x, &y);
+
    float su= sum(x,y);
    printf( "%f + %f = %f\n", x,y, su);
 
