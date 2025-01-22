@@ -1,9 +1,9 @@
 /***************************************
-* 23F - Lab01 *
-* Author: Last name, first name *
-* EECS/Prism username: Your eecs login username *
-* Yorku Student #: Your student number *
-* Email: Your email address *
+* Lab01 *
+* Author: Advincula, Juan-Miguel *
+* EECS/Prism username: jmiguela *
+* Yorku Student #: 220523627 *
+* Email: jmiguela@my.yorku.ca *
 ****************************************/
 
 #include <stdio.h> // define EOF

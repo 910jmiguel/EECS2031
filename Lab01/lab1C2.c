@@ -31,7 +31,6 @@ main ()
   // create two arrays of the same size of arr, one to hold even numbers and one for prime numbers; 
   // scan the array to find even and prime numbers, and put them in corresponding arrays
   // you may add other variables as needed
-   ....  
 
   
   // output the even numbers
