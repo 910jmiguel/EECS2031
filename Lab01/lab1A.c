@@ -15,13 +15,14 @@ int isOperator(char c);
 int main() {
     int num;
     char ch;
+    //int sum;
 
     while(1) {
         printf("Enter an integer and a character seperated by blank: ");
         scanf("%d %c", &num, &ch);
 
         if(isDigit(1)) {
-            printf("Character '%c' represents a digit\n\n", &ch);
+            printf("Character '%c' represents a digit. Sum of %d and %c is %d\n\n", ch, num, ch, num + ch);
         } else if(isLetter(ch)) {
             printf("Character '%c' represents a letter\n\n", &ch);
         } else if(isOperator(ch)) {
