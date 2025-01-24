@@ -1,16 +1,18 @@
 /***************************************
-* FALL 2024 - Lab01 *
-* Author: Last name, first name *
-* EECS/Prism username: Your eecs login username *
-* Yorku Student #: Your student number *
-* Email: Your email address *
-****************************************/
+ * Lab01 *
+ * Author: Advincula, Juan-Miguel *
+ * EECS/Prism username: jmiguela *
+ * Yorku Student #: 220523627 *
+ * Email: jmiguela@my.yorku.ca *
+ ****************************************/
 
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
 
 #define SIZE 10
+
+int isPrime(int n);
 
 main ()
 {
@@ -24,19 +26,47 @@ main ()
 
   // display the array
   printf("array [ ");
-  for( ...) {
-    ...;
+  for(i = 0; i < SIZE; i++) {
+    printf("%d ", arr[i]);
   } 
   printf("]\n");
   // create two arrays of the same size of arr, one to hold even numbers and one for prime numbers; 
+  int even[SIZE];
+  int prime[SIZE];
+  int evenCount = 0;
+  int primeCount = 0;
   // scan the array to find even and prime numbers, and put them in corresponding arrays
+  for (i = 0; i < SIZE; i++) {
+    if(arr[i] % 2 == 0) {
+      even[i] == arr[i];
+      evenCount++;
+    }
+    
+    if(isPrime(arr[i])) {
+      prime[i] == arr[i];
+      primeCount++;
+    }
+  }
   // you may add other variables as needed
-
-  
   // output the even numbers
-  
-
+  printf("%d even numbers: ", evenCount);
+  for(i = 0; i < evenCount; i++) {
+    printf("%d ", even[i]);
+  }
   // output the prime numbers
+  printf("%d prime numbers: ", primeCount);
+  for(i = 0; i < primeCount; i++) {
+    printf("%d ", prime[i]);
+  }
+  return 0;
+}
 
+int isPrime(n) {
+  for (int i = 2; i < n; i++) {
+    if (n % i == 0) {
+      return 0;
+    }
+  }
+  return 1;
 }
 
