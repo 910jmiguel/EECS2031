@@ -1,9 +1,9 @@
 /***************************************
 * Lab02 *
-* Author: Last name, first name *
-* EECS/Prism username: Your eecs login username *
-* Yorku Student #: Your student number *
-* Email: Your email address *
+* Author: Advincula, Miguel *
+* EECS/Prism username: jmiguela *
+* Yorku Student #: 220523627 *
+* Email: jmiguela@my.yorku.ca *
 ****************************************/
 
 #include <stdio.h>
@@ -15,7 +15,7 @@ int main() {
    char word[MAX_SIZE];
    char ch;
 
-   char helloArr[]  = "helloWorld";
+   char helloArr[] = "helloWorld";
    printf("\"%s\" contains %d characters, but the size is %lu (bytes)\n", helloArr, length(helloArr), sizeof(helloArr));
    helloArr[5] = '\0'; helloArr[3]='X'; helloArr[7] ='Y';
    printf("\"%s\" contains %d characters, but the size is %lu (bytes)\n\n", helloArr, length(helloArr), sizeof(helloArr));
@@ -23,15 +23,19 @@ int main() {
 
    /********** Fill in your code below **********/
    printf("Enter a word and a character separated by blank: ");
-   scanf("%s %c", ..);
+   scanf("%s %c", word, ch);
 
-   while ()   
+   while (isQuit(word) == 0)   
    {  
      // don't change these first two lines
      printf("Input word is \"");
      displayStr(word);
-     ....
 
+     printf("Contains %d characters", length(word));
+
+     printf("'%c' appears %d times in the word", ch, occurrence(word, ch));
+
+     printf("Index of '%c' in the word is %d", ch, indexOf(word, ch));
    }
    return 0;
 }
@@ -40,26 +44,45 @@ int main() {
 // Function to calculate the length of the string
 int length(char word[])
 {
-
+   int count = 0;
+   for(int i = 0; word[i] != '\0'; ++i) {
+      count++;
+   }
+   return count;
 }
 
 // Function to find the index of the first occurrence of a character in a string
 int indexOf(char word[], char c)
 {
- 
+   for(int i = 0; word[i] != '\0'; ++i) {
+      if(word[i] == c) {
+         return i;
+      } else {
+         return -1;
+      }
+   }
 }
 
 // Function to count the number of occurrences of a character in a string
 int occurrence(char word[], char c)
 {
-
+   int count = 0;
+   for(int i = 0; word[i] != '\0'; ++i) {
+      if(word[i] == c) {
+         count++;
+         return count;
+      } else {
+         return 0;
+      }
+   }
 }
 
 // Function to cdisplay the string character by character
 void displayStr(char word[])
 {
-
-
+   for(int i = 0; word[i] != '\0'; ++i) {
+      putchar(word);
+   }
 }
 // Function to check if the input word is "quit"
 //There is a flaw in this code. Find it and correct it . Submit the updated function in your submission
