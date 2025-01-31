@@ -8,12 +8,18 @@
 
 #include <stdio.h>
 //What should be the MAX_SIZE here?
-#define MAX_SIZE 
+#define MAX_SIZE 20
 
 int main() {
 
    char word[MAX_SIZE];
    char ch;
+
+   int length(char word[]);
+   int indexOf(char word[], char c);
+   int occurrence(char word[], char c);
+   void displayStr(char word[]);
+   int isQuit (char word[]);
 
    char helloArr[] = "helloWorld";
    printf("\"%s\" contains %d characters, but the size is %lu (bytes)\n", helloArr, length(helloArr), sizeof(helloArr));
@@ -23,19 +29,23 @@ int main() {
 
    /********** Fill in your code below **********/
    printf("Enter a word and a character separated by blank: ");
-   scanf("%s %c", word, ch);
+   scanf("%s %c", &word, &ch);
 
    while (isQuit(word) == 0)   
    {  
      // don't change these first two lines
      printf("Input word is \"");
      displayStr(word);
+     printf("\"");
 
-     printf("Contains %d characters", length(word));
+     printf("\nContains %d characters", length(word));
 
-     printf("'%c' appears %d times in the word", ch, occurrence(word, ch));
+     printf("\n'%c' appears %d times in the word", ch, occurrence(word, ch));
 
-     printf("Index of '%c' in the word is %d", ch, indexOf(word, ch));
+     printf("\nIndex of '%c' in the word is %d", ch, indexOf(word, ch));
+
+     printf("\nEnter a word and a character separated by blank: ");
+     scanf("%s %c", &word, &ch);
    }
    return 0;
 }
@@ -81,7 +91,7 @@ int occurrence(char word[], char c)
 void displayStr(char word[])
 {
    for(int i = 0; word[i] != '\0'; ++i) {
-      putchar(word);
+      putchar(word[i]);
    }
 }
 // Function to check if the input word is "quit"
@@ -89,8 +99,10 @@ void displayStr(char word[])
 int isQuit (char word[])
 {
  int i;
- if (word[0]=='q' && word[1]=='u' && word[2]=='i' && word[3]=='t')
-    return 1; 
- else 
-    return 0;
+   if (word[0]=='q' && word[1]=='u' && word[2]=='i' && word[3]=='t') {
+      return 1; 
+   }
+   else {
+      return 0;
+   }
 }

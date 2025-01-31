@@ -11,27 +11,26 @@
 
 #define SIZE 14
 
-int my_atoi(char c[]);
+int my_atoi(char c[], int base);
 int isQuit (char c[]);
 
 int main(){
   int a,b;
   char arr [SIZE];
+  int base;
 
-  printf("Enter a word of positive number or 'quit': " );
-  scanf("%s", arr);
+  printf("Enter a word of positive number and base or 'quit': " );
+  scanf("%s %d", arr, &base);
+
   while(isQuit(arr) == 0)
   {
     printf("%s\n", arr);
 
-    a = atoi(arr);
-    printf("atoi:    %d (%#o, %#X)\t%d\t%d\n", a,a,a, a*2, a*a);
-
-    b = my_atoi(arr);
+    b = my_atoi(arr, base);
     printf("my_atoi: %d (%#o, %#X)\t%d\t%d\n", b,b,b, b*2, b*b);
 
-    printf("Enter a word of positive number or 'quit': " );
-    scanf("%s", arr);
+    printf("Enter a word of positive number and base or 'quit': " );
+    scanf("%s %d", arr, &base);
   }
 
   return 0;
@@ -42,16 +41,16 @@ int main(){
 
 /* Here you should scan from RIGHT to LEFT. See the description of question inlab document */
 
-int my_atoi (char c[])
+int my_atoi (char c[], int base)
 {
   int atoi = 0;
   int length = strlen(c);
   int mult = 1;
 
   for(int i = length - 1; i >= 0; i--) {
-    int digit = c[i] - '0'; // converts from character to integer
-    atoi += digit * mult; // multiply by a multiplier and then adds to result
-    mult *= 10; // multiplies by 10 each time
+    int digit = c[i] - '0';
+    atoi += digit * mult;
+    mult *= base;
   }
 
   return atoi;
