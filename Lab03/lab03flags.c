@@ -1,9 +1,9 @@
 /***************************************
 * Lab03 *
-* Author: Last name, first name *
-* EECS/Prism username: Your eecs login username *
-* Yorku Student #: Your student number *
-* Email: Your email address *
+* Author: Advincula, Miguel *
+* EECS/Prism username: jmiguela *
+* Yorku Student #: 220523627 *
+* Email: jmiguela@my.yorku.ca *
 ****************************************/
 
 #include <stdio.h>
@@ -15,15 +15,16 @@ void printBinary(short int);
 
 int main () {
   int c, i,index;
+  int digit;
   short flags = 0;
   printf("flags: ");
   printBinary(flags); 
   printf("\nEnter your input: ");
 
   while ((c = getchar()) != EOF){
-   if (  ){  // if c is a digit with numerical value n, turn on bit-n in flags
-
-
+   if (c >= '0' && c <= '9'){  // if c is a digit with numerical value n, turn on bit-n in flags
+      digit = c - '0';
+      flags |= (1 << digit);
    } 
   
   }
@@ -36,7 +37,7 @@ int main () {
   // you can use one of the idioms mentioned in pdf lab manual, or get hint 
   // from the function printBinary() listed below.
   for(i=0; i<=9; i++)  {
-    int check = ..     // is bit-i is on or off? i.e., 0 or 1?
+    int check = flags & (1 << i);     // is bit-i is on or off? i.e., 0 or 1?
     if ( check )    // check != 0
       printf("%d: %s\n", i, "Yes");
     else printf("%d: %s\n", i, "No");
@@ -50,8 +51,8 @@ void printBinary(short int n ){
    int cou = SIZE-1;
    int k[SIZE]={0};
 
-   while (n && cou >=0) {
-      if (n & 1) // !=0
+   while (n && cou >= 0) {
+      if (n & 1) // != 0
          k[cou]=1; //printf("1");
       else
          k[cou]=0; //printf("0");
@@ -63,7 +64,7 @@ void printBinary(short int n ){
    for(; i< SIZE;i++)
    {
       printf("%d", k[i]);
-      if ((i+1)%8==0)
+      if ((i + 1) % 8 ==0)
       {
          printf(" ");
       }
