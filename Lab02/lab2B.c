@@ -12,7 +12,7 @@
 #define SIZE 14
 
 int my_atoi(char c[]);
-int isQuit (char c[]);
+int isQuit(char c[]);
 
 int main(){
   int a,b;

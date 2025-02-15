@@ -13,10 +13,8 @@ int main() {
     int ch;
     int digitCount[SIZE] = {0};
     int count = 0;
-    
 
-    while (ch != EOF) {
-        ch = getchar();     
+    while ((ch = getchar()) != EOF) {    
         
         if(ch >= '0' && ch <= '9') {
             digitCount[ch - '0']++;
@@ -28,7 +26,6 @@ int main() {
     for (int i = 0; i < SIZE; i++) {
         printf("%d: %d\n", i, digitCount[i]);
     }
-
     printf("X: %d\n", count);
     
     return 0;

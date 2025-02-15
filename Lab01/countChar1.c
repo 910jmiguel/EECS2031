@@ -9,17 +9,23 @@
 #include <stdio.h> // define EOF
 
 int main(){
-  int c;
-  int count = 0;
+  int c, cC, lC, cB;
+  cC = lC = cB = 0;
  
   c = getchar();
   while(c != EOF)  /* no end-of-file yet */
   { 
-    count++;  // spaces and '\n' also counted
+    if (c == '\n') { // a new line
+      lC++;
+    } else if(c == ' ') {
+      cB++;
+    } else {
+      cC++;
+    }
 
-    c = getchar(); /* read next */
+    c = getchar(); // read again
   }
-  printf("# of chars: %d\n",count);
+  printf("# of chars: %d (# of blanks: %d)\n# of lines: %d\n", cC, cB, lC);
 
 }
 

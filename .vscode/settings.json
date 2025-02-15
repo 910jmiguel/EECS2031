@@ -1,3 +1,7 @@
 {
-    "C_Cpp.errorSquiggles": "enabled"
+  "C_Cpp.errorSquiggles": "enabled",
+  "files.associations": {
+    "LOOP_EX_DO.C": "cpp",
+    "LOOP_EX.C": "cpp"
+  }
 }
