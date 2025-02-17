@@ -1,14 +1,15 @@
 /***************************************
 * Lab03 *
-* Author: Last name, first name *
-* EECS/Prism username: Your eecs login username *
-* Yorku Student #: Your student number *
-* Email: Your email address *
+* Author: Advincula, Miguel *
+* EECS/Prism username: jmiguela *
+* Yorku Student #: 220523627 *
+* Email: jmiguela@my.yorku.ca *
 ****************************************/
 
 #include <stdio.h>
-
 #define AlphaV 100
+
+void printBinary(int n);
 
 int main() {
 
@@ -33,8 +34,7 @@ int main() {
 
     /* now do packing for Alpha,Red,Green,Blue, */
 
-
-
+    rgb_pack = (alpha << 24) | (r << 16) | (g << 8) | b;
 
 
 
@@ -44,13 +44,13 @@ int main() {
      printf(" (%d)\n", rgb_pack);
 
      printf("\nUnpacking  ......\n");  
-     r=g=b=-1;
+     r=g=b=-1; 
 
     /* now do unpacking */
 
-
-
-
+    r_unpack = (rgb_pack & 0x00FF0000) >> 16;
+    g_unpack = (rgb_pack & 0x0000FF00) >> 8;
+    b_unpack = (rgb_pack & 0x000000FF);
 
 
      printf("R: "); printBinary(r_unpack); printf(" (%d, %#o, %#X)\n", r_unpack, r_unpack, r_unpack);
@@ -58,7 +58,12 @@ int main() {
      printf("B: "); printBinary(b_unpack); printf(" (%d, %#o, %#X)\n", b_unpack, b_unpack, b_unpack);
      printf("------------------------------------\n"); 
 	 
-    
+     printf("enter R value (0~255): ");
+     scanf("%d",&r);
+     printf("enter G value (0~255): ");
+     scanf("%d",&g);
+     printf("enter B value (0~255): ");
+     scanf("%d",&b);
 
   }
 
