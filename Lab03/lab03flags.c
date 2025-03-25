@@ -14,7 +14,7 @@ void printBinary(short int);
 /*counting digits*/
 
 int main () {
-  int c, i,index;
+  int c, i, index;
   int digit;
   short flags = 0;
   printf("flags: ");
@@ -38,7 +38,7 @@ int main () {
   // from the function printBinary() listed below.
   for(i=0; i<=9; i++)  {
     int check = flags & (1 << i);     // is bit-i is on or off? i.e., 0 or 1?
-    if ( check )    // check != 0
+    if (check)    // check != 0
       printf("%d: %s\n", i, "Yes");
     else printf("%d: %s\n", i, "No");
   } 

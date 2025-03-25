@@ -15,7 +15,7 @@
  #include <string.h>
 
  #define MAX_LINES 34
- #define MAX_COLS 54 
+ #define MAX_COLS 54
 
  void print2D(char p[][MAX_COLS], int n);
  void exchange2D(char p[][MAX_COLS], int n);

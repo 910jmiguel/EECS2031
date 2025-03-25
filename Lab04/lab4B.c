@@ -16,7 +16,6 @@ struct ints
    int data2;
 };
 
-
 void processStruc (struct ints);
 struct ints getSumDiff(int, int);
 void printStruc(struct ints);

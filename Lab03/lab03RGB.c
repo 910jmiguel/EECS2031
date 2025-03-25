@@ -13,7 +13,7 @@ void printBinary(int n);
 
 int main() {
 
-  int r, g,b;
+  int r,g,b;
   unsigned int rgb_pack;
   int r_unpack, g_unpack,b_unpack;
   int alpha = AlphaV;
