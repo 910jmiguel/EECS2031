@@ -1,10 +1,5 @@
-/***************************************
- * Lab01 *
- * Author: Advincula, Juan-Miguel *
- * EECS/Prism username: jmiguela *
- * Yorku Student #: 220523627 *
- * Email: jmiguela@my.yorku.ca *
- ****************************************/
+
+
 
 #include <stdio.h>
 

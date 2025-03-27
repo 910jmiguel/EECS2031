@@ -1,10 +1,4 @@
-/***************************************
-* Lab02 *
-* Author: Advincula, Miguel *
-* EECS/Prism username: jmiguela *
-* Yorku Student #: 220523627 *
-* Email: jmiguela@my.yorku.ca *
-****************************************/
+
 #include <stdio.h>
 #include <stdlib.h>  // for atoi
 #include <string.h> 

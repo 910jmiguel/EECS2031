@@ -1,11 +1,4 @@
-// your information goes here
-/***************************************
-* Lab04 *
-* Author: Advincula, Juan-Miguel *
-* EECS/Prism username: jmiguela *
-* Yorku Student #: 220523627 *
-* Email: jmiguela@my.yorku.ca *
-****************************************/
+
 
 /* Reads in a list of strings from the keyboard, then re-organize them */
  /* and then displays them on the screen. */
