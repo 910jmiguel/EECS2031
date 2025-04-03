@@ -1,9 +1,3 @@
-# Lab07
-# Author: Advincula, Juan-Miguel
-# EECS/Prism Username: jmiguela
-# YorkU Student Number: 220523627
-# Email: jmiguela@my.yorku.ca
-
 #!/bin/bash
 
 if [ "$#" -lt 2 ]; then
